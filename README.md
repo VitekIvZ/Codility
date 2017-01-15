@@ -1,2 +1,2 @@
 # Codility
-My project on https://codility.com
+My projects on https://codility.com
