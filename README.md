@@ -1,2 +1,2 @@
 # Codility
-My projects on https://codility.com
+My solution of task on https://codility.com
