@@ -41,8 +41,15 @@ test:
 """
 
 def solution(A):
-    A.sort()
-	for i in range(len(A)):
-        key=A[i+1]
-		if (key-A[i])!=1:
-			return A[i]+1
+    if len(A)==0 or len(A)==1:
+        return 0
+    elif len(A)==2:
+        A.sort()
+        if A[0]!=A[1]:
+            return A[0]+1
+    else:
+        A.sort()
+        for i in range(len(A)):
+            key=A[i+1]
+            if (key-A[i])!=1:
+                return A[i]+1
