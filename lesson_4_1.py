@@ -35,7 +35,11 @@ def solution(A):
             if i not in tmp:
                 tmp.append(i)
 		tmp.sort()
-		for i in range(len(tmp)):
-			if tmp[i]!=i+1:
-				return i+1
+		missing=1
+		for elem in tmp:
+			if elem == missing:
+				missing +=1
+			if elem > missing:
+				break
+		return missing
 	return len(A)+1
