@@ -51,4 +51,9 @@ Elements of input arrays can be modified.
 """
 
 def solution(A):
-    pass
+    result=abs(A[0]-sum(A[1:]))
+	for i in range(len(A)):
+		tmp=abs(sum(A[:i+1])-sum(A[i+1:]))
+		if tmp<result:
+			result=tmp
+	return result
