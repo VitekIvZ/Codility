@@ -45,8 +45,10 @@ def solution(A):
         return 0
     elif len(A)==2:
         A.sort()
-        if A[0]!=A[1]:
+        if A[1]-A[0]!=1:
             return A[0]+1
+        else:
+            return 0
     else:
         A.sort()
         for i in range(len(A)):
