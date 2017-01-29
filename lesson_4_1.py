@@ -28,3 +28,14 @@ Complexity:
 
 Elements of input arrays can be modified.
 """
+def solution(A):
+    if len(A)!=0:
+        tmp=[]
+        for i in A:
+            if i not in tmp:
+                tmp.append(i)
+		tmp.sort()
+		for i in range(len(tmp)):
+			if tmp[i]!=i+1:
+				return i+1
+	return len(A)+1
