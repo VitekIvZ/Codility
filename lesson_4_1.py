@@ -33,14 +33,14 @@ def solution(A):
     count = [0]*(N + 1)
 
     # Counts all elements of A tha belongs to sequence {1, ..., N}
-    for k in range(N):
-	if N >= A[k] > 0:
-            count[A[k]] += 1
+    for i in range(N):
+	if N >= A[i] > 0:
+            count[A[i]] += 1
 
     # Searches for the lesser integer that not belongs to A
-    for k in range(1, N + 1):
-        if count[k] == 0:
-            return k
+    for i in range(1, N + 1):
+        if count[i] == 0:
+            return i
 
     # If A has all elements from 1 to N, N + 1 is the minimal integer
     return N + 1
