@@ -52,10 +52,11 @@ Elements of input arrays can be modified.
 """
 def solution(X, A):
     b=[]
+    count_x=X
     for i in A:
-        if i <= X:
-            if i not in b:
+        if i <= X and i not in b:
                 b.append(i)
-                if len(b)==X:
+                count_x-=1
+                if count_x==0:
                     return A.index(i)
     return -1
