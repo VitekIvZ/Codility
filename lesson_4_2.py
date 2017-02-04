@@ -58,4 +58,4 @@ def solution(X, A):
                 b.append(i)
                 if len(b)==X:
                     return A.index(i)
-                    
+    return -1
