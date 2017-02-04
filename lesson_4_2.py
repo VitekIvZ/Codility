@@ -50,3 +50,12 @@ Complexity:
 
 Elements of input arrays can be modified.
 """
+def solution(X, A):
+    b=[]
+    for i in A:
+        if i <= X:
+            if i not in b:
+                b.append(i)
+                if len(b)==X:
+                    return A.index(i)
+                    
